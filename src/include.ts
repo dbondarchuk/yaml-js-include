@@ -12,7 +12,7 @@ export class YamlInclude {
   /**
    * Creates a new instance
    * @param _directoryOptions Default options for directory include
-   * @param _encoding Encoding of files. @default utf-8
+   * @param _encoding Encoding of files.
    */
   constructor(
     private readonly _directoryOptions?: Partial<IncludeDirOptions>,
@@ -22,6 +22,7 @@ export class YamlInclude {
   /**
    * Reads a YAML file and parses it's content using include schema
    * @param filePath Path to the file to read
+   * @typeParam T - Type of the expected result object
    * @returns Parsed file content
    */
   public load<T>(filePath: string): T {
@@ -32,6 +33,7 @@ export class YamlInclude {
   /**
    * Reads a YAML file asynchronously and parses it's content using include schema
    * @param filePath Path to the file to read
+   * @typeParam T - Type of the expected result object
    * @returns Parsed file content
    */
   public async loadAsync<T>(filePath: string): Promise<T> {
@@ -43,6 +45,7 @@ export class YamlInclude {
    * Parses a YAML content using include schema
    * @param src YAML as string
    * @param basePath Base path for the include schema
+   * @typeParam T - Type of the expected result object
    * @returns Parsed file content
    */
   public parse<T>(src: string, basePath: string): T {

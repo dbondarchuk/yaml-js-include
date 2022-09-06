@@ -1,4 +1,4 @@
-[yaml-js-include - v0.0.1](../README.md) / [Exports](../modules.md) / YamlInclude
+[yaml-js-include - v0.0.2](../README.md) / [Exports](../modules.md) / YamlInclude
 
 # Class: YamlInclude
 
@@ -31,10 +31,6 @@ A wrapper around YAML loader to enable including of files or directories
 
 Creates a new instance
 
-**`Default`**
-
-utf-8
-
 #### Parameters
 
 | Name | Type | Default value | Description |
@@ -44,7 +40,7 @@ utf-8
 
 #### Defined in
 
-include.ts:17
+[include.ts:17](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L17)
 
 ## Accessors
 
@@ -60,7 +56,7 @@ Gets a base file path for resolving files or directories
 
 #### Defined in
 
-include.ts:60
+[include.ts:63](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L63)
 
 • `set` **basePath**(`filePath`): `void`
 
@@ -78,7 +74,7 @@ Sets a base file path for resolving files or directories
 
 #### Defined in
 
-include.ts:54
+[include.ts:57](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L57)
 
 ___
 
@@ -94,7 +90,7 @@ Gets default directory include options
 
 #### Defined in
 
-include.ts:75
+[include.ts:78](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L78)
 
 ___
 
@@ -110,7 +106,7 @@ Gets default encoding for reading the files
 
 #### Defined in
 
-include.ts:70
+[include.ts:73](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L73)
 
 ___
 
@@ -126,7 +122,7 @@ Gets a schema for YAML
 
 #### Defined in
 
-include.ts:80
+[include.ts:83](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L83)
 
 ## Methods
 
@@ -138,9 +134,9 @@ Reads a YAML file and parses it's content using include schema
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `T` |
+| Name | Description |
+| :------ | :------ |
+| `T` | Type of the expected result object |
 
 #### Parameters
 
@@ -156,7 +152,7 @@ Parsed file content
 
 #### Defined in
 
-include.ts:27
+[include.ts:28](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L28)
 
 ___
 
@@ -168,9 +164,9 @@ Reads a YAML file asynchronously and parses it's content using include schema
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `T` |
+| Name | Description |
+| :------ | :------ |
+| `T` | Type of the expected result object |
 
 #### Parameters
 
@@ -186,7 +182,7 @@ Parsed file content
 
 #### Defined in
 
-include.ts:37
+[include.ts:39](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L39)
 
 ___
 
@@ -198,9 +194,9 @@ Parses a YAML content using include schema
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `T` |
+| Name | Description |
+| :------ | :------ |
+| `T` | Type of the expected result object |
 
 #### Parameters
 
@@ -217,4 +213,4 @@ Parsed file content
 
 #### Defined in
 
-include.ts:48
+[include.ts:51](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/include.ts#L51)

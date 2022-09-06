@@ -1,4 +1,4 @@
-[yaml-js-include - v0.0.1](../README.md) / [Exports](../modules.md) / IncludeDirOptions
+[yaml-js-include - v0.0.2](../README.md) / [Exports](../modules.md) / IncludeDirOptions
 
 # Interface: IncludeDirOptions
 
@@ -34,7 +34,7 @@ false
 
 #### Defined in
 
-dir.ts:41
+[dir.ts:41](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L41)
 
 ___
 
@@ -50,7 +50,7 @@ Always exclude this files
 
 #### Defined in
 
-dir.ts:35
+[dir.ts:35](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L35)
 
 ___
 
@@ -66,7 +66,7 @@ true
 
 #### Defined in
 
-dir.ts:82
+[dir.ts:82](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L82)
 
 ___
 
@@ -82,7 +82,7 @@ List of allowed file extensions
 
 #### Defined in
 
-dir.ts:53
+[dir.ts:53](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L53)
 
 ___
 
@@ -94,7 +94,7 @@ Determines whether to ignore dir structure for constructing properties
 
 #### Defined in
 
-dir.ts:76
+[dir.ts:76](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L76)
 
 ___
 
@@ -110,7 +110,7 @@ Prefix of the file names to be ignored
 
 #### Defined in
 
-dir.ts:65
+[dir.ts:65](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L65)
 
 ___
 
@@ -126,7 +126,7 @@ true
 
 #### Defined in
 
-dir.ts:71
+[dir.ts:71](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L71)
 
 ___
 
@@ -142,7 +142,7 @@ Always include these file
 
 #### Defined in
 
-dir.ts:29
+[dir.ts:29](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L29)
 
 ___
 
@@ -158,7 +158,7 @@ false
 
 #### Defined in
 
-dir.ts:59
+[dir.ts:59](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L59)
 
 ___
 
@@ -178,7 +178,7 @@ File inside `books/chapters/first.yaml` will be converted to `book_chapters_firs
 
 #### Defined in
 
-dir.ts:89
+[dir.ts:89](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L89)
 
 ___
 
@@ -194,4 +194,4 @@ true
 
 #### Defined in
 
-dir.ts:47
+[dir.ts:47](https://github.com/dbondarchuk/yaml-js-include/blob/4fa7f08/src/dir.ts#L47)
