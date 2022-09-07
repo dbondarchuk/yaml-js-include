@@ -6,7 +6,7 @@
     "module": "commonjs",
     "lib": ["ES6"],
     "moduleResolution": "node",
-    "rootDir": ".",
+    "rootDir": "src",
     "outDir": "build",
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
@@ -20,7 +20,7 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "strictNullChecks": false,
-    "resolveJsonModule": true
+    "declaration": true
   },
   "typedocOptions": {},
   "include": ["src/**/*", "__tests__/**/*"]

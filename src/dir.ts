@@ -115,7 +115,7 @@ export const getDirectoryIncludeType = (
     kind: 'sequence',
     // Data should be an array of 1 or 2 items (path and optional options)
     resolve: (data: any) =>
-      Array.isArray(data) && data.length > 0 && data.length < 2,
+      Array.isArray(data) && data.length > 0 && data.length < 3,
     construct: (data: any[]): any => {
       const basePath = yamlInclude.basePath;
 
