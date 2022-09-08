@@ -133,17 +133,10 @@ export const getDirectoryIncludeType = (
       } as IncludeDirOptions;
       options.extensions.sort((a, b) => b.length - a.length);
 
-      console.debug(
-        'Constructing directory include: resolved options %j',
-        options,
-      );
-
       if (Array.isArray(data[0])) {
         files = data[0];
       } else {
         const fullPath = p.join(basePath, data[0]);
-
-        console.debug(`Constructing directory include: reading ${fullPath}`);
 
         files = recursiveReaddirSync(fullPath, options.recursive);
         files = files.map((filePath) => filePath.replace(basePath + p.sep, ''));
@@ -154,18 +147,12 @@ export const getDirectoryIncludeType = (
         return a.length - b.length;
       });
 
-      console.debug(`Constructing directory include: files ${files}`);
-
       const getKeepingFileName = (filePath: string): string | undefined => {
         const extension = options.extensions.find((ext) =>
           filePath.endsWith(ext),
         );
 
         if (!extension) {
-          console.debug(
-            'Constructing directory include: skipping disallowed file extension in %s',
-            filePath,
-          );
           return undefined;
         }
 
@@ -178,20 +165,12 @@ export const getDirectoryIncludeType = (
             options.include.indexOf(filename) !== -1 ||
             options.include.indexOf(filename + extension) !== -1)
         ) {
-          console.debug(
-            'Constructing directory include: whitelisting %s',
-            filePath,
-          );
           return filename;
         }
 
         // if ANY part of the path has an ignorePrefix,
         // skip it
         if (filePath.indexOf(p.sep + options.ignoreIndicator) !== -1) {
-          console.debug(
-            'Constructing directory include: ignoring %s',
-            filePath,
-          );
           return undefined;
         }
 
@@ -202,24 +181,13 @@ export const getDirectoryIncludeType = (
             options.exclude.indexOf(filename) !== -1 ||
             options.exclude.indexOf(filename + extension) !== -1)
         ) {
-          console.debug(
-            'Constructing directory include: blacklisting %s',
-            filePath,
-          );
           return undefined;
         }
-
-        // guess we're keeping it!
-        console.debug(
-          `Constructing directory include: keepFile: keeping ${filePath}`,
-        );
 
         return filename;
       };
 
       files.forEach(function (filePath: string) {
-        console.debug(`Constructing directory include: looking at ${filePath}`);
-
         let filename = getKeepingFileName(filePath);
         if (!filename) {
           return;

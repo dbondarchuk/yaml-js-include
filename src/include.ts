@@ -56,7 +56,6 @@ export class YamlInclude {
   /** Sets a base file path for resolving files or directories */
   public set basePath(filePath: string) {
     this._baseFile = p.resolve(filePath);
-    console.debug(`Setting base file ${this._baseFile}`);
   }
 
   /** Gets a base file path for resolving files or directories */
@@ -65,7 +64,6 @@ export class YamlInclude {
       ? this._baseFile
       : p.dirname(this._baseFile);
 
-    console.debug(`Getting base path ${dir}`);
     return dir;
   }
 

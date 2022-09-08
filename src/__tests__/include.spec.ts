@@ -1,5 +1,5 @@
 import { readFile } from "fs/promises";
-import { IncludeDirOptions, YamlInclude } from "../src"
+import { IncludeDirOptions, YamlInclude } from ".."
 
 describe('YamlInclude', () => {
     beforeEach(() => {

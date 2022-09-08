@@ -1,4 +1,4 @@
-import { YamlInclude } from "../src"
+import { YamlInclude } from ".."
 
 describe('Directory include', () => {
     beforeEach(() => {
@@ -99,7 +99,6 @@ describe('Directory include', () => {
         const yi = new YamlInclude({recursive: false});
         
         const actual = yi.load<any>('fixtures/basics/directory.yaml');
-        console.log(JSON.stringify(actual));
         expect(Object.keys(actual.pages).length).toBe(3);
         expect(actual.pages.first.name).toBe('1');
         expect(actual.pages.second.name).toBe('2');

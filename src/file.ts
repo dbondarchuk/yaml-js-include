@@ -11,7 +11,6 @@ export const getFileIncludeType = (yamlInclude: YamlInclude): yaml.Type => {
   return new yaml.Type('tag:yaml.org,2002:inc/file', {
     kind: 'scalar',
     resolve: (data: any): boolean => {
-      console.debug(`Resolving data for file: ${data}`);
       return typeof data === 'string';
     },
     construct: (data: string): any => {
@@ -19,10 +18,6 @@ export const getFileIncludeType = (yamlInclude: YamlInclude): yaml.Type => {
       const fullPath = p.join(basePath, data);
 
       yamlInclude.basePath = fullPath;
-
-      console.debug(
-        `Constructing file include: basePath=${basePath}, fullPath: ${fullPath}, data=${data}`,
-      );
 
       const included = yamlInclude.load(fullPath);
 

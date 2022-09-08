@@ -1,4 +1,4 @@
-import { YamlInclude } from "../src"
+import { YamlInclude } from ".."
 
 describe('File include', () => {
     beforeEach(() => {
