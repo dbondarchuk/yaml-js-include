@@ -4,13 +4,13 @@ import * as yaml from 'js-yaml';
 import * as merge from 'lodash.merge';
 import { YamlInclude } from './include';
 
-function recursiveReaddirSync(path: string): string[] {
+function recursiveReaddirSync(path: string, recursive = true): string[] {
   let list: string[] = [];
   const files = fs.readdirSync(path);
 
   files.forEach(function (file) {
     const stats = fs.lstatSync(p.join(path, file));
-    if (stats.isDirectory()) {
+    if (recursive && stats.isDirectory()) {
       list = list.concat(recursiveReaddirSync(p.join(path, file)));
     } else {
       list.push(p.join(path, file));
@@ -122,24 +122,6 @@ export const getDirectoryIncludeType = (
       let files: string[] = [];
       let result = {};
 
-      if (Array.isArray(data[0])) {
-        files = data[0];
-      } else {
-        const fullPath = p.join(basePath, data[0]);
-
-        console.debug(`Constructing directory include: reading ${fullPath}`);
-
-        files = recursiveReaddirSync(fullPath);
-        files = files.map((filePath) => filePath.replace(basePath + p.sep, ''));
-      }
-
-      console.debug(`Constructing directory include: files ${files}`);
-
-      // sort the by length of filepath
-      files.sort(function (a, b) {
-        return a.length - b.length;
-      });
-
       if (!data[1]) {
         data[1] = {};
       }
@@ -155,6 +137,24 @@ export const getDirectoryIncludeType = (
         'Constructing directory include: resolved options %j',
         options,
       );
+
+      if (Array.isArray(data[0])) {
+        files = data[0];
+      } else {
+        const fullPath = p.join(basePath, data[0]);
+
+        console.debug(`Constructing directory include: reading ${fullPath}`);
+
+        files = recursiveReaddirSync(fullPath, options.recursive);
+        files = files.map((filePath) => filePath.replace(basePath + p.sep, ''));
+      }
+
+      // sort the by length of filepath
+      files.sort(function (a, b) {
+        return a.length - b.length;
+      });
+
+      console.debug(`Constructing directory include: files ${files}`);
 
       const getKeepingFileName = (filePath: string): string | undefined => {
         const extension = options.extensions.find((ext) =>

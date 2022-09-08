@@ -1,0 +1,2 @@
+type: Values
+values: !!inc/file extra/includesFileFromParent.yaml

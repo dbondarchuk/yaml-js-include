@@ -31,6 +31,8 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .ts --ext .mts",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "prettier": "prettier --config .prettierrc --write .",
     "docs": "typedoc"
   }

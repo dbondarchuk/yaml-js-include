@@ -1,0 +1,1 @@
+pages: !!inc/dir [['../directory/first.page.yaml']]
