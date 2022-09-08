@@ -1,1 +1,4 @@
 /**/*.js
+/**/*.spec.js
+/**/*.spec.ts
+build
