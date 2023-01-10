@@ -1,6 +1,6 @@
-[yaml-js-include - v0.0.2](README.md) / Exports
+[yaml-js-include - v0.0.4](README.md) / Exports
 
-# yaml-js-include - v0.0.2
+# yaml-js-include - v0.0.4
 
 ## Table of contents
 

@@ -18,7 +18,7 @@ or
 Here is a small example of the script which allows to load a YAML file with the include tags:
 
 ```typescript
-import { YamlInclude } from "yaml-js-include";
+import { YamlInclude } from 'yaml-js-include';
 
 const yamlInclude = new YamlInclude();
 const myObj = yamlInclude.load<MyType>(pathToFile);
@@ -29,7 +29,7 @@ An example YAML file can look like this:
 ```yaml
 name: Example
 variables: !!inc/file variables.yaml
-pages: !!inc/dir ['pages', {extensions: ['.page.yaml']}]
+pages: !!inc/dir ['pages', { extensions: ['.page.yaml'] }]
 steps:
   - name: Open Browser
     type: open-browser
@@ -49,8 +49,8 @@ This package adds the support for the following tags inside of YAML files:
 Arguments:
 
 - `path` - **required** - Relative (or absolute) path to the directory
-- `options` - *optional* - Optional options for the directory include tag. Extends [`IncludeDirOptions`](/docs//interfaces/IncludeDirOptions.md)
-The merge flow for the options is like this: Default options -> Options passed to the `YamlInclude` constructor -> Options declared on the tag inside YAML file.
+- `options` - _optional_ - Optional options for the directory include tag. Extends [`IncludeDirOptions`](/docs//interfaces/IncludeDirOptions.md)
+  The merge flow for the options is like this: Default options -> Options passed to the `YamlInclude` constructor -> Options declared on the tag inside YAML file.
 
 You can find options and defaults [here](/docs//interfaces/IncludeDirOptions.md)
 

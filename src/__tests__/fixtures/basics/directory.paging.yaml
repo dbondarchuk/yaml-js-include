@@ -1,1 +1,1 @@
-pages: !!inc/dir ['directory', {extensions: ['.paging.yaml']}]
+pages: !!inc/dir ['directory', { extensions: ['.paging.yaml'] }]

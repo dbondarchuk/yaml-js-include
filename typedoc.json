@@ -14,8 +14,8 @@
   "entryPoints": ["src/index.ts"],
   "entryPointStrategy": "expand",
   "externalSymbolLinkMappings": {
-        "typescript": {
-            "Partial": "https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype"
-        }
+    "typescript": {
+      "Partial": "https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype"
     }
+  }
 }

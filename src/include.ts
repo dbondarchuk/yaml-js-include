@@ -22,35 +22,45 @@ export class YamlInclude {
   /**
    * Reads a YAML file and parses it's content using include schema
    * @param filePath Path to the file to read
+   * @param baseSchema Determines the base schema for YAML parse. @default yaml.DEFAULT_SCHEMA
    * @typeParam T - Type of the expected result object
    * @returns Parsed file content
    */
-  public load<T>(filePath: string): T {
+  public load<T>(filePath: string, baseSchema?: yaml.Schema): T {
     const src = readFileSync(filePath, this._encoding);
-    return this.parse(src, filePath);
+    return this.parse(src, filePath, baseSchema);
   }
 
   /**
    * Reads a YAML file asynchronously and parses it's content using include schema
    * @param filePath Path to the file to read
+   * @param baseSchema Determines the base schema for YAML parse. @default yaml.DEFAULT_SCHEMA
    * @typeParam T - Type of the expected result object
    * @returns Parsed file content
    */
-  public async loadAsync<T>(filePath: string): Promise<T> {
+  public async loadAsync<T>(
+    filePath: string,
+    baseSchema?: yaml.Schema,
+  ): Promise<T> {
     const src = await readFile(filePath, this._encoding);
-    return this.parse(src, filePath);
+    return this.parse(src, filePath, baseSchema);
   }
 
   /**
    * Parses a YAML content using include schema
    * @param src YAML as string
    * @param basePath Base path for the include schema
+   * @param baseSchema Determines the base schema for YAML parse. @default yaml.DEFAULT_SCHEMA
    * @typeParam T - Type of the expected result object
    * @returns Parsed file content
    */
-  public parse<T>(src: string, basePath: string): T {
+  public parse<T>(src: string, basePath: string, baseSchema?: yaml.Schema): T {
+    baseSchema = baseSchema || yaml.DEFAULT_SCHEMA;
     this.basePath = basePath;
-    return yaml.load(src, { schema: this.schema, filename: basePath }) as T;
+    return yaml.load(src, {
+      schema: baseSchema.extend(this.types),
+      filename: basePath,
+    }) as T;
   }
 
   /** Sets a base file path for resolving files or directories */
@@ -77,9 +87,13 @@ export class YamlInclude {
     return this._directoryOptions;
   }
 
+  /** Gets include types for the YAML schema */
+  public get types(): yaml.Type[] {
+    return [getDirectoryIncludeType(this), getFileIncludeType(this)];
+  }
+
   /** Gets a schema for YAML */
   public get schema(): yaml.Schema {
-    const types = [getDirectoryIncludeType(this), getFileIncludeType(this)];
-    return new yaml.Schema(types);
+    return new yaml.Schema(this.types);
   }
 }
