@@ -1,4 +1,4 @@
-yaml-js-include - v0.0.4 / [Exports](modules.md)
+yaml-js-include - v0.0.6 / [Exports](modules.md)
 
 # yaml-js-include
 

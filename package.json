@@ -1,6 +1,6 @@
 {
   "name": "yaml-js-include",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Extension for yaml-js library to be able to include files/directories in yaml files",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -30,12 +30,12 @@
     "tslib": "^2.4.0",
     "typedoc": "^0.23.14",
     "typedoc-plugin-markdown": "^3.13.6",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.2",
+    "prettier": "^2.7.1"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "lodash.merge": "^4.6.2",
-    "prettier": "^2.7.1"
+    "lodash.merge": "^4.6.2"
   },
   "scripts": {
     "build": "tsc",
