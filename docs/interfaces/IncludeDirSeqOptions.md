@@ -39,7 +39,7 @@ BaseIncludeDirOptions.allowEmpty
 
 #### Defined in
 
-[dir.ts:40](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L40)
+[dir.ts:40](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L40)
 
 ___
 
@@ -59,7 +59,7 @@ BaseIncludeDirOptions.exclude
 
 #### Defined in
 
-[dir.ts:34](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L34)
+[dir.ts:34](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L34)
 
 ___
 
@@ -79,7 +79,7 @@ BaseIncludeDirOptions.extensions
 
 #### Defined in
 
-[dir.ts:52](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L52)
+[dir.ts:52](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L52)
 
 ___
 
@@ -99,7 +99,7 @@ BaseIncludeDirOptions.ignoreIndicator
 
 #### Defined in
 
-[dir.ts:58](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L58)
+[dir.ts:58](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L58)
 
 ___
 
@@ -119,7 +119,7 @@ BaseIncludeDirOptions.include
 
 #### Defined in
 
-[dir.ts:28](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L28)
+[dir.ts:28](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L28)
 
 ___
 
@@ -139,4 +139,4 @@ BaseIncludeDirOptions.recursive
 
 #### Defined in
 
-[dir.ts:46](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L46)
+[dir.ts:46](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L46)

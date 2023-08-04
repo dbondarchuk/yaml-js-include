@@ -44,7 +44,7 @@ BaseIncludeDirOptions.allowEmpty
 
 #### Defined in
 
-[dir.ts:40](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L40)
+[dir.ts:40](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L40)
 
 ___
 
@@ -64,7 +64,7 @@ BaseIncludeDirOptions.exclude
 
 #### Defined in
 
-[dir.ts:34](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L34)
+[dir.ts:34](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L34)
 
 ___
 
@@ -80,7 +80,7 @@ true
 
 #### Defined in
 
-[dir.ts:78](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L78)
+[dir.ts:78](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L78)
 
 ___
 
@@ -100,7 +100,7 @@ BaseIncludeDirOptions.extensions
 
 #### Defined in
 
-[dir.ts:52](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L52)
+[dir.ts:52](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L52)
 
 ___
 
@@ -112,7 +112,7 @@ Determines whether to ignore dir structure for constructing properties
 
 #### Defined in
 
-[dir.ts:72](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L72)
+[dir.ts:72](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L72)
 
 ___
 
@@ -132,7 +132,7 @@ BaseIncludeDirOptions.ignoreIndicator
 
 #### Defined in
 
-[dir.ts:58](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L58)
+[dir.ts:58](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L58)
 
 ___
 
@@ -148,7 +148,7 @@ true
 
 #### Defined in
 
-[dir.ts:67](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L67)
+[dir.ts:67](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L67)
 
 ___
 
@@ -168,7 +168,7 @@ BaseIncludeDirOptions.include
 
 #### Defined in
 
-[dir.ts:28](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L28)
+[dir.ts:28](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L28)
 
 ___
 
@@ -184,7 +184,7 @@ false
 
 #### Defined in
 
-[dir.ts:84](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L84)
+[dir.ts:84](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L84)
 
 ___
 
@@ -204,7 +204,7 @@ File inside `books/chapters/first.yaml` will be converted to `book_chapters_firs
 
 #### Defined in
 
-[dir.ts:91](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L91)
+[dir.ts:91](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L91)
 
 ___
 
@@ -224,4 +224,4 @@ BaseIncludeDirOptions.recursive
 
 #### Defined in
 
-[dir.ts:46](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L46)
+[dir.ts:46](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/dir.ts#L46)

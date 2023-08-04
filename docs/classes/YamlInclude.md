@@ -43,7 +43,7 @@ Creates a new instance
 
 #### Defined in
 
-[include.ts:19](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L19)
+[include.ts:19](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L19)
 
 ## Accessors
 
@@ -59,7 +59,7 @@ Gets a base file path for resolving files or directories
 
 #### Defined in
 
-[include.ts:75](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L75)
+[include.ts:75](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L75)
 
 • `set` **basePath**(`filePath`): `void`
 
@@ -77,7 +77,7 @@ Sets a base file path for resolving files or directories
 
 #### Defined in
 
-[include.ts:70](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L70)
+[include.ts:70](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L70)
 
 ___
 
@@ -93,7 +93,7 @@ Gets default directory include options
 
 #### Defined in
 
-[include.ts:89](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L89)
+[include.ts:89](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L89)
 
 ___
 
@@ -109,7 +109,7 @@ Gets default encoding for reading the files
 
 #### Defined in
 
-[include.ts:84](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L84)
+[include.ts:84](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L84)
 
 ___
 
@@ -125,7 +125,7 @@ Gets a schema for YAML
 
 #### Defined in
 
-[include.ts:104](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L104)
+[include.ts:104](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L104)
 
 ___
 
@@ -141,7 +141,7 @@ Gets default directory as array include options
 
 #### Defined in
 
-[include.ts:94](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L94)
+[include.ts:94](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L94)
 
 ___
 
@@ -157,7 +157,7 @@ Gets include types for the YAML schema
 
 #### Defined in
 
-[include.ts:99](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L99)
+[include.ts:99](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L99)
 
 ## Methods
 
@@ -192,7 +192,7 @@ Parsed file content
 
 #### Defined in
 
-[include.ts:32](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L32)
+[include.ts:32](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L32)
 
 ___
 
@@ -227,7 +227,7 @@ Parsed file content
 
 #### Defined in
 
-[include.ts:44](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L44)
+[include.ts:44](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L44)
 
 ___
 
@@ -263,4 +263,4 @@ Parsed file content
 
 #### Defined in
 
-[include.ts:60](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L60)
+[include.ts:60](https://github.com/dbondarchuk/yaml-js-include/blob/0d38f47/src/include.ts#L60)

@@ -5,6 +5,7 @@ import { YamlInclude } from './include';
 import { BaseIncludeDirOptions, recursiveReaddirSync } from './dir';
 
 /** Describes options for including directories as an array */
+// eslint-disable-next-line  @typescript-eslint/no-empty-interface
 export interface IncludeDirSeqOptions extends BaseIncludeDirOptions {
 }
 
@@ -45,7 +46,7 @@ export const getSeqIncludeType = (
         ...data[1],
       } as IncludeDirSeqOptions;
 
-      let result = [];
+      const result = [];
       options.extensions.sort((a, b) => b.length - a.length);
 
       if (Array.isArray(data[0])) {
@@ -103,7 +104,7 @@ export const getSeqIncludeType = (
       };
 
       files.forEach(function (filePath: string) {
-        let filename = getKeepingFileName(filePath);
+        const filename = getKeepingFileName(filePath);
         if (!filename) {
           return;
         }
