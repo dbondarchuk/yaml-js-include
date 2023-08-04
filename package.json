@@ -1,6 +1,6 @@
 {
   "name": "yaml-js-include",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Extension for yaml-js library to be able to include files/directories in yaml files",
   "main": "build/index.js",
   "types": "build/index.d.ts",

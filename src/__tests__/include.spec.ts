@@ -1,5 +1,6 @@
 import { readFile } from 'fs/promises';
 import { IncludeDirOptions, YamlInclude } from '..';
+import { IncludeDirSeqOptions } from '../seq';
 
 describe('YamlInclude', () => {
   beforeEach(() => {
@@ -22,7 +23,7 @@ describe('YamlInclude', () => {
 
   it('Returns correct encoding', () => {
     const encoding: BufferEncoding = 'binary';
-    const yi = new YamlInclude(undefined, encoding);
+    const yi = new YamlInclude(undefined, undefined, encoding);
 
     expect(yi.encoding).toBe(encoding);
   });
@@ -37,15 +38,28 @@ describe('YamlInclude', () => {
     expect(yi.directoryOptions).toBe(dirOptions);
   });
 
+  it('Returns correct seq options', () => {
+    const seqOptions: Partial<IncludeDirSeqOptions> = {
+      allowEmpty: true,
+      extensions: ['.json'],
+    };
+    const yi = new YamlInclude(undefined, seqOptions);
+
+    expect(yi.seqOptions).toBe(seqOptions);
+  });
+
   it('Returns correct types', () => {
     const yi = new YamlInclude();
 
-    expect(yi.types.length).toBe(2);
+    expect(yi.types.length).toBe(3);
     expect(
       yi.types.some((type) => type['type'] === 'tag:yaml.org,2002:inc/file'),
     );
     expect(
       yi.types.some((type) => type['type'] === 'tag:yaml.org,2002:inc/dir'),
+    );
+    expect(
+      yi.types.some((type) => type['type'] === 'tag:yaml.org,2002:inc/seq'),
     );
   });
 

@@ -1,4 +1,4 @@
-[yaml-js-include - v0.0.6](../README.md) / [Exports](../modules.md) / YamlInclude
+[yaml-js-include - v1.0.0](../README.md) / [Exports](../modules.md) / YamlInclude
 
 # Class: YamlInclude
 
@@ -16,6 +16,7 @@ A wrapper around YAML loader to enable including of files or directories
 - [directoryOptions](YamlInclude.md#directoryoptions)
 - [encoding](YamlInclude.md#encoding)
 - [schema](YamlInclude.md#schema)
+- [seqOptions](YamlInclude.md#seqoptions)
 - [types](YamlInclude.md#types)
 
 ### Methods
@@ -28,7 +29,7 @@ A wrapper around YAML loader to enable including of files or directories
 
 ### constructor
 
-• **new YamlInclude**(`_directoryOptions?`, `_encoding?`)
+• **new YamlInclude**(`_directoryOptions?`, `_seqOptions?`, `_encoding?`)
 
 Creates a new instance
 
@@ -37,11 +38,12 @@ Creates a new instance
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `_directoryOptions?` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`IncludeDirOptions`](../interfaces/IncludeDirOptions.md)\> | `undefined` | Default options for directory include |
+| `_seqOptions?` | [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`IncludeDirSeqOptions`](../interfaces/IncludeDirSeqOptions.md)\> | `undefined` | Default options for directory as array include |
 | `_encoding` | `BufferEncoding` | `'utf-8'` | Encoding of files. |
 
 #### Defined in
 
-[include.ts:17](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L17)
+[include.ts:19](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L19)
 
 ## Accessors
 
@@ -57,7 +59,7 @@ Gets a base file path for resolving files or directories
 
 #### Defined in
 
-[include.ts:72](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L72)
+[include.ts:75](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L75)
 
 • `set` **basePath**(`filePath`): `void`
 
@@ -75,7 +77,7 @@ Sets a base file path for resolving files or directories
 
 #### Defined in
 
-[include.ts:67](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L67)
+[include.ts:70](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L70)
 
 ___
 
@@ -91,7 +93,7 @@ Gets default directory include options
 
 #### Defined in
 
-[include.ts:86](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L86)
+[include.ts:89](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L89)
 
 ___
 
@@ -107,7 +109,7 @@ Gets default encoding for reading the files
 
 #### Defined in
 
-[include.ts:81](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L81)
+[include.ts:84](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L84)
 
 ___
 
@@ -123,7 +125,23 @@ Gets a schema for YAML
 
 #### Defined in
 
-[include.ts:96](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L96)
+[include.ts:104](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L104)
+
+___
+
+### seqOptions
+
+• `get` **seqOptions**(): [`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`IncludeDirSeqOptions`](../interfaces/IncludeDirSeqOptions.md)\>
+
+Gets default directory as array include options
+
+#### Returns
+
+[`Partial`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype )<[`IncludeDirSeqOptions`](../interfaces/IncludeDirSeqOptions.md)\>
+
+#### Defined in
+
+[include.ts:94](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L94)
 
 ___
 
@@ -139,7 +157,7 @@ Gets include types for the YAML schema
 
 #### Defined in
 
-[include.ts:91](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L91)
+[include.ts:99](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L99)
 
 ## Methods
 
@@ -174,7 +192,7 @@ Parsed file content
 
 #### Defined in
 
-[include.ts:29](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L29)
+[include.ts:32](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L32)
 
 ___
 
@@ -209,7 +227,7 @@ Parsed file content
 
 #### Defined in
 
-[include.ts:41](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L41)
+[include.ts:44](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L44)
 
 ___
 
@@ -245,4 +263,4 @@ Parsed file content
 
 #### Defined in
 
-[include.ts:57](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/include.ts#L57)
+[include.ts:60](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/include.ts#L60)

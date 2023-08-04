@@ -46,6 +46,8 @@ This package adds the support for the following tags inside of YAML files:
 
 ### !!inc/dir [path, options?]
 
+Merges files in directory into the object
+
 Arguments:
 
 - `path` - **required** - Relative (or absolute) path to the directory
@@ -53,6 +55,18 @@ Arguments:
   The merge flow for the options is like this: Default options -> Options passed to the `YamlInclude` constructor -> Options declared on the tag inside YAML file.
 
 You can find options and defaults [here](/docs//interfaces/IncludeDirOptions.md)
+
+### !!inc/seq [path, options?]
+
+Merges files in directory into the array
+
+Arguments:
+
+- `path` - **required** - Relative (or absolute) path to the directory
+- `options` - _optional_ - Optional options for the directory include tag. Extends [`IncludeDirSeqOptions`](/docs//interfaces/IncludeDirSeqOptions.md)
+  The merge flow for the options is like this: Default options -> Options passed to the `YamlInclude` constructor -> Options declared on the tag inside YAML file.
+
+You can find options and defaults [here](/docs//interfaces/IncludeDirSeqOptions.md)
 
 ### !!inc/file path
 

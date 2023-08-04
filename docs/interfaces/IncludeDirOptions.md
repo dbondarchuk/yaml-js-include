@@ -1,8 +1,14 @@
-[yaml-js-include - v0.0.6](../README.md) / [Exports](../modules.md) / IncludeDirOptions
+[yaml-js-include - v1.0.0](../README.md) / [Exports](../modules.md) / IncludeDirOptions
 
 # Interface: IncludeDirOptions
 
 Describes options for including directories
+
+## Hierarchy
+
+- `BaseIncludeDirOptions`
+
+  ↳ **`IncludeDirOptions`**
 
 ## Table of contents
 
@@ -32,9 +38,13 @@ Determines whether to allow empty entries
 
 false
 
+#### Inherited from
+
+BaseIncludeDirOptions.allowEmpty
+
 #### Defined in
 
-[dir.ts:41](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L41)
+[dir.ts:40](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L40)
 
 ___
 
@@ -48,9 +58,13 @@ Always exclude this files
 
 []
 
+#### Inherited from
+
+BaseIncludeDirOptions.exclude
+
 #### Defined in
 
-[dir.ts:35](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L35)
+[dir.ts:34](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L34)
 
 ___
 
@@ -66,7 +80,7 @@ true
 
 #### Defined in
 
-[dir.ts:82](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L82)
+[dir.ts:78](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L78)
 
 ___
 
@@ -80,9 +94,13 @@ List of allowed file extensions
 
 ['.yaml', '.yml']
 
+#### Inherited from
+
+BaseIncludeDirOptions.extensions
+
 #### Defined in
 
-[dir.ts:53](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L53)
+[dir.ts:52](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L52)
 
 ___
 
@@ -94,7 +112,7 @@ Determines whether to ignore dir structure for constructing properties
 
 #### Defined in
 
-[dir.ts:76](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L76)
+[dir.ts:72](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L72)
 
 ___
 
@@ -108,9 +126,13 @@ Prefix of the file names to be ignored
 
 '_'
 
+#### Inherited from
+
+BaseIncludeDirOptions.ignoreIndicator
+
 #### Defined in
 
-[dir.ts:65](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L65)
+[dir.ts:58](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L58)
 
 ___
 
@@ -126,7 +148,7 @@ true
 
 #### Defined in
 
-[dir.ts:71](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L71)
+[dir.ts:67](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L67)
 
 ___
 
@@ -140,9 +162,13 @@ Always include these file
 
 []
 
+#### Inherited from
+
+BaseIncludeDirOptions.include
+
 #### Defined in
 
-[dir.ts:29](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L29)
+[dir.ts:28](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L28)
 
 ___
 
@@ -158,7 +184,7 @@ false
 
 #### Defined in
 
-[dir.ts:59](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L59)
+[dir.ts:84](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L84)
 
 ___
 
@@ -170,7 +196,7 @@ Separator to use when constructing property names based on the directory structu
 
 **`Default`**
 
-true
+'_'
 
 **`Example`**
 
@@ -178,7 +204,7 @@ File inside `books/chapters/first.yaml` will be converted to `book_chapters_firs
 
 #### Defined in
 
-[dir.ts:89](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L89)
+[dir.ts:91](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L91)
 
 ___
 
@@ -192,6 +218,10 @@ Determines whether to look for files recursively
 
 true
 
+#### Inherited from
+
+BaseIncludeDirOptions.recursive
+
 #### Defined in
 
-[dir.ts:47](https://github.com/dbondarchuk/yaml-js-include/blob/fca359f/src/dir.ts#L47)
+[dir.ts:46](https://github.com/dbondarchuk/yaml-js-include/blob/cb38e6f/src/dir.ts#L46)

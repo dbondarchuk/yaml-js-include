@@ -4,7 +4,7 @@ import * as yaml from 'js-yaml';
 import * as merge from 'lodash.merge';
 import { YamlInclude } from './include';
 
-function recursiveReaddirSync(path: string, recursive = true): string[] {
+export function recursiveReaddirSync(path: string, recursive = true): string[] {
   let list: string[] = [];
   const files = fs.readdirSync(path);
 
@@ -20,8 +20,7 @@ function recursiveReaddirSync(path: string, recursive = true): string[] {
   return list;
 }
 
-/** Describes options for including directories */
-export interface IncludeDirOptions {
+export interface BaseIncludeDirOptions {
   /**
    * Always include these file
    * @default []
@@ -53,17 +52,14 @@ export interface IncludeDirOptions {
   extensions: string[];
 
   /**
-   * Determines whether to convert property names into lower case
-   * @default false
-   */
-  lowerKeys: boolean;
-
-  /**
    * Prefix of the file names to be ignored
    * @default '_'
    */
   ignoreIndicator: string;
+}
 
+/** Describes options for including directories */
+export interface IncludeDirOptions extends BaseIncludeDirOptions {
   /**
    * Determines whether to include top directory directly and not inside of top directory name property
    * @default true
@@ -82,8 +78,14 @@ export interface IncludeDirOptions {
   excludeTopLevelDirSeparator: boolean;
 
   /**
+   * Determines whether to convert property names into lower case
+   * @default false
+   */
+  lowerKeys: boolean;
+
+  /**
    * Separator to use when constructing property names based on the directory structure
-   * @default true
+   * @default '_'
    * @example File inside `books/chapters/first.yaml` will be converted to `book_chapters_first` property name
    */
   pathSeparator: string;
@@ -100,7 +102,7 @@ const DefaultIncludeDirOptions: IncludeDirOptions = {
   ignoreTopLevelDir: true,
   ignoreDirStructure: true,
   excludeTopLevelDirSeparator: true,
-  pathSeparator: '_',
+  pathSeparator: '_'
 };
 
 /**
@@ -120,7 +122,6 @@ export const getDirectoryIncludeType = (
       const basePath = yamlInclude.basePath;
 
       let files: string[] = [];
-      let result = {};
 
       if (!data[1]) {
         data[1] = {};
@@ -131,6 +132,8 @@ export const getDirectoryIncludeType = (
         ...(yamlInclude.directoryOptions ?? {}),
         ...data[1],
       } as IncludeDirOptions;
+
+      let result = {};
       options.extensions.sort((a, b) => b.length - a.length);
 
       if (Array.isArray(data[0])) {

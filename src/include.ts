@@ -4,6 +4,7 @@ import * as yaml from 'js-yaml';
 import * as p from 'path';
 import { IncludeDirOptions, getDirectoryIncludeType } from './dir';
 import { getFileIncludeType } from './file';
+import { IncludeDirSeqOptions, getSeqIncludeType } from './seq';
 
 /** A wrapper around YAML loader to enable including of files or directories */
 export class YamlInclude {
@@ -12,10 +13,12 @@ export class YamlInclude {
   /**
    * Creates a new instance
    * @param _directoryOptions Default options for directory include
+   * @param _seqOptions Default options for directory as array include
    * @param _encoding Encoding of files.
    */
   constructor(
     private readonly _directoryOptions?: Partial<IncludeDirOptions>,
+    private readonly _seqOptions?: Partial<IncludeDirSeqOptions>,
     private readonly _encoding: BufferEncoding = 'utf-8',
   ) {}
 
@@ -87,9 +90,14 @@ export class YamlInclude {
     return this._directoryOptions;
   }
 
+  /** Gets default directory as array include options */
+  public get seqOptions(): Partial<IncludeDirSeqOptions> | undefined {
+    return this._seqOptions;
+  }
+
   /** Gets include types for the YAML schema */
   public get types(): yaml.Type[] {
-    return [getDirectoryIncludeType(this), getFileIncludeType(this)];
+    return [getDirectoryIncludeType(this), getSeqIncludeType(this), getFileIncludeType(this)];
   }
 
   /** Gets a schema for YAML */
